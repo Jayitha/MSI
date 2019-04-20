@@ -7,7 +7,7 @@ import math
 #n2 = X2.shape[0]
 n1 = 15
 n2 = 20
-alpha = 1-0.95
+alpha = 0.05
 df = n1 + n2 - 2
 #x1bar = int(np.mean(X1))
 #x2bar = int(np.mean(X2))
@@ -23,6 +23,8 @@ S2pl = 0.642**2
 print("SS1: ", SS1," SS2: ", SS2," S2pl: ",S2pl)
 t = (x1bar - x2bar)/math.sqrt(S2pl*(n1 + n2)/(n1*n2))
 print("t: ",t)
+pvalue = stats.t.sf(abs(t),df)*2
+print("pvalue: ", pvalue)
 tcritical = stats.t.ppf(1-alpha/2, df)
 print("tcritical: ", tcritical)
 if abs(t) > tcritical:
