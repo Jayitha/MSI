@@ -14,8 +14,8 @@ df = n1 + n2 - 2
 x1bar = 2.514
 x2bar = 2.963
 print("x1bar: ",x1bar, " x2bar: ",x2bar)
-#SS1 = n1*int(np.cov(X1,bias=true))
-#SS2 = n2*int(np.cov(X2,bias=true))
+#SS1 = n1*int(np.cov(X1.T,bias=True))
+#SS2 = n2*int(np.cov(X2.T,bias=True))
 #S2pl = (SS1 + SS2)/ df
 SS1 = 0
 SS2 = 0
